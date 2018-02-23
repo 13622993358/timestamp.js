@@ -1,4 +1,4 @@
-一些常用的JS方法包括：</br>
+<span style="font-size:20px">一些常用的JS方法包括：</span></br>
 1.替换某个位置字符串:</br>
 2.判断屏幕高度:</br>
 3.hash值的设置与获取:</br>
