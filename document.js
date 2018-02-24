@@ -210,18 +210,18 @@ function ajaxGet (uurl,data, callback) {
 function settime(val,countdown) {
         if (countdown == 0) { 
           $(val).val("重新获取验证码"); 
-          $('#input-b').css({
+          $('#getCode').css({
             backgroundColor:'#00C4DB'
           });
-         $('#input-b').attr("disabled", false);
+         $('#getCode').attr("disabled", false);
           return;
         } else {
           $(val).val("重新发送(" + countdown + ")"); 
           countdown--; 
-          $('#input-b').css({
+          $('#getCode').css({
             backgroundColor:'#949494'
           })
-         $('#input-b').attr("disabled", true);
+         $('#getCode').attr("disabled", true);
         } 
         setTimeout(function() { 
         settime(val,countdown); 
