@@ -239,8 +239,8 @@ $("#call").on('click',function(){
 });
 
 
- // 22 上传图片时先显示在页面中
- function getObjectURL(file) {
+// 22 上传图片时先显示在页面中
+function getObjectURL(file) {
     var url = null ; 
     if (window.createObjectURL!=undefined) { // basic
         url = window.createObjectURL(file) ;
@@ -250,7 +250,7 @@ $("#call").on('click',function(){
         url = window.webkitURL.createObjectURL(file) ;
     }
     return url ;
- } 
+} 
 	 // 上传图片显示页面示例
 
 	 	//html代码	 
@@ -272,13 +272,63 @@ $("#call").on('click',function(){
 
 
  // 23 ajax滚动加载
- var page = 1
- $(window).scroll(function() {  
+ var page = 1;
+ var size = 10;
+ function scroll(page,size){
+ 	$(window).scroll(function() {  
       //当滚轮滚动到文档最末位，也就是拉到了最底下  
         if( $(window).scrollTop() == $(document).height() - $(window).height() ) { 
-        	page++
-        	ajaxGet(UrlConfig.order.orderlist()+'&page='+page+'&size='+size, "" , function(res) {
-
-        	});
+        	page++;
+        	// ajax代码
          }
    });
+ }
+
+
+// 24 轮播图自动播放
+ 	var index = 0;//图片初始下标
+ 	var time = 3000;//自动播放时间1000=1秒
+ 	setInterval(sild,time);//定时器
+ 	function sild(){
+		var sildlength = $('.slideshow>ul>li');//图片容器
+		// 当图片下标大于图片数时，回到第一张
+		if (index > sildlength.length) {
+    	 index = 0;
+		} else {
+      	index += 1;
+		}
+		// 当前下标图片显示，其余图片隐藏
+		sildlength.eq(index).css({
+			display:'block'
+		}).siblings().css({
+			display:'none'
+		});
+		return index;
+	};
+
+
+// 25 手机端手指滑动 如果使用zepto需修改e参数e.changedTouches[0].pageX;
+    var slideshow = $('.slideshow');//滑动区域
+    var startX;//开始滑动值
+    var midwayX;//过程滑动值
+    var offset = 50;//最低滑动值
+    // 开始滑动时的X坐标
+    slideshow.on('touchstart', function (e) {
+        startX = e.originalEvent.targetTouches[0].pageX;
+    });
+    //记录滑动过程中的X坐标
+    slideshow.on('touchmove', function (e) {
+        midwayX = e.originalEvent.targetTouches[0].pageX;
+    });
+    
+    //开始小于结束表示下一张不然表示上一张
+    slideshow.on('touchend',function (e){
+    	var endX = Math.abs(startX-midwayX);//结束时的坐标等于开始减过程中的坐标
+    	if(end > offset) {	//大于最低滑动值时执行
+    		if(startX >= endX){
+        		// 向右滑执行的函数
+        	}else{
+        		// 向左滑执行的函数
+        	}
+    	}
+    });
