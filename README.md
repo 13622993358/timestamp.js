@@ -33,6 +33,6 @@ console.log(month)//04-27
 	// 多久之前
 var ago = Z.getAgo(1523263824000);
 console.log(ago);//19小时前
-</script>
 
+</script>
 ```
