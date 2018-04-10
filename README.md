@@ -5,7 +5,7 @@
 ```
 <script src="timestamp.js"></script>
 ```
-内置4个方法</br>
+内置4个方法：</br>
 1.	Z.formatDate(timestamp)
 2.	Z.formatDay(timestamp)
 3.	Z.formatM(timestamp);
