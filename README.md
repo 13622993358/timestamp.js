@@ -19,22 +19,18 @@ var timestamp = 1523263824*1000;
 
 // 完整日期
 var data = Z.formatDate(timestamp);
-
 console.log(data);//2018-04-27 00:00
 
 // 年月日
 var day = Z.formatDay(timestamp);
-
 console.log(day);//2018-04-27
 
 // 月日
 var month = Z.formatM(timestamp);
-
 console.log(month)//04-27
 
 // 多久之前
 var ago = Z.getAgo(1523263824000);
-
 console.log(ago);//19小时前
 
 </script>
