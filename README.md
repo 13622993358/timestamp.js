@@ -1,10 +1,18 @@
 # 时间戳操作：</br>
 默认13位，10位数要*1000;</br>
+
 引入timestamp.js 不依赖其他任何框架</br>
 
 ```
 <script src="timestamp.js"></script>
+```
+内置4个方法</br>
+1.	Z.formatDate(timestamp)
+2.	Z.formatDay(timestamp)
+3.	Z.formatM(timestamp);
+4.	Z.formatM(timestamp);
 
+```
 <script>
 	// 默认13位，10位数要*1000;
 	var timestamp = 1523263824*1000;
