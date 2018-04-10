@@ -1,5 +1,7 @@
 # 时间戳操作：</br>
-默认13位，10位数要*1000;:</br>
+默认13位，10位数要*1000;</br>
+引入timestamp.js 不依赖其他任何框架</br>
+
 ```
 <script src="timestamp.js"></script>
 
