@@ -14,6 +14,7 @@
 
 ```
 <script>
+
 // 默认13位，10位数要*1000;
 var timestamp = 1523263824*1000;
 
@@ -33,4 +34,5 @@ console.log(month)//04-27
 var ago = Z.getAgo(1523263824000);
 console.log(ago);//19小时前
 </script>
+
 ```
