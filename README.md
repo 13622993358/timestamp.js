@@ -9,7 +9,7 @@
 1.	Z.formatDate(timestamp)
 2.	Z.formatDay(timestamp)
 3.	Z.formatM(timestamp);
-4.	Z.formatM(timestamp);
+4.	Z.getAgo(timestamp);
 
 ```
 <script>
